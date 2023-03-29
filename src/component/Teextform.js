@@ -36,7 +36,7 @@ export default function Textform(props) {
 
   <div className={`container text-${props.mode==='light'?'dark':'light'}`}>
       <h2>Text Summary</h2>
-      <p>This Text Has {text.length} character and {text.split(" ").filter((element)=>{return element.length!==0}).length} words</p>
+      <p>This Text Has {text.length} character and {text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words</p>
   </div>
     </>
     
